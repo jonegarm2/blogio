@@ -1,1 +1,24 @@
-<h1>Bloggy Style is a shitty name</h1>
+<h1>Blogio's Bloggy Blog</h1>
+
+<a href="#">New Post</a>
+
+<center>
+<h2>All Posts</h2>
+</center>
+
+<table>
+    <tbody>
+    <tr>
+        <th>Post Title</th>
+        <th>Upvotes</th>
+        <th>Date Published</th>
+    </tr>
+    <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.title %></td>
+            <td><%= post.upvotes %></td>
+            <td><%= post.created_at %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
